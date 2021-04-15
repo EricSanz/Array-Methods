@@ -13,6 +13,7 @@ let skylabArray = {
     // The map() method creates a new array populated with the results of calling a provided function on every element in the calling array.
     map: (fn, object) => {
         let newObject = {};
+
         for (let property in object) {
             if (property !== 'length' && object.hasOwnProperty(property)) {
                 newObject[property] = fn(object[property]);
@@ -26,6 +27,7 @@ let skylabArray = {
     fill: (object, value, start = 0, end = object.length) => {
         let newObject = {};
         newObject.length = object.length;
+
         for (let property in object) {
             if ((property < start || property >= end) && property !== 'length' && object.hasOwnProperty(property)) {
                 newObject[property] = object[property];
@@ -34,7 +36,28 @@ let skylabArray = {
             }
         };
         return newObject;
-    } 
+    },
+
+    // The copyWithin() method copies part of an array to another location in the same array and returns it without modifying its length.
+    copyWithin: (object, target, start = 0, end = Object.entries(object).length) => {
+        if (target >= Object.entries(object).length) {
+            return;
+        }
+        let values = {};
+
+        for (let i = start; i < end; i++) {
+                values[i] = Object.entries(object)[i][1];
+        };
+
+        for (let i = 0; i < Object.entries(values).length; i++) {
+            if (!object[target + i]) {
+                return object;
+            }
+            object[target + i] = Object.entries(values)[i][1];
+        };
+
+        return object;
+    }
 }
 
 let testArray = {
