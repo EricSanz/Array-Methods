@@ -1,0 +1,23 @@
+{
+  "name": "Array-Methods",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Array-methods.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EricSanz/Array-Methods.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EricSanz/Array-Methods/issues"
+  },
+  "homepage": "https://github.com/EricSanz/Array-Methods#readme",
+  "dependencies": {
+    "jest": "^26.6.3"
+  }
+}
