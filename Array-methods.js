@@ -5,8 +5,7 @@ let skylabArray = {
         return {
             ...fn,
             [fn.length]: object,
-            length: fn.length + 1,
-            __proto__: skylabArray
+            length: fn.length + 1
         };
     },
 
@@ -67,6 +66,17 @@ let skylabArray = {
                 return object[property];
             }
         }
+    },
+
+    //  The findIndex() method returns the index of the first element in teh array that satisfies the provided testing function.
+    // Otherwise, it returns -1, indicating that no element passed the test.
+    findIndex: (fn, object) => {
+        for (let property in object) {
+            if (fn(object[property])) {
+                return Number(property);
+            }
+        }
+        return -1;
     }
 }
 
