@@ -102,6 +102,33 @@ describe('Array Methods', () => {
             //assert
             expect(response).toEqual({ '0': 2, '1': 3, '2': 3, length: 3});
         })
+    });
+
+    describe('find method', () => {
+        test('Should return the first number greater than 2', () => {
+            //arrange
+            //act
+            const response = testArray.find((x) => x > 2, testArray);
+            //assert
+            expect(response).toBe(3);
+        });
+
+        test('Should return the fisrt number below -5, in this case, -20', () => {
+            //arrange
+            const array = { '0': 1, '1': 45, '2': 20, '3': -1, '4': -20, length: 5};
+            //act
+            const response = skylabArray.find((x) => x < -5, array);
+            //assert
+            expect(response).toBe(-20);
+        });
+
+        test('Should return undefined', () => {
+            //arrange
+            //act
+            const response = testArray.find((x) => x > 5, testArray);
+            //assert
+            expect(response).toBe(undefined);
+        })
     })
 
 });
