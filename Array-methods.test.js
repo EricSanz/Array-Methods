@@ -1,5 +1,5 @@
 const { test, expect, describe } = require('@jest/globals');
-const { testArray } = require('./Array-methods');
+const { testArray, skylabArray } = require('./Array-methods');
 
 describe('Array Methods', () => {
 
@@ -39,6 +39,15 @@ describe('Array Methods', () => {
             //assert
             expect(response).toEqual({ '0': 2, '1': 4, '2': 6, length: 3});
         });
+
+        test('Should add " position" in every element', () => {
+            //arrange
+            const array = { 0: 'first', 1: 'second', 2: 'third', length: 3 };
+            //act
+            const response = skylabArray.map((x) => x + ' position', array);
+            //assert
+            expect(response).toEqual({ '0': 'first position', '1': 'second position', '2': 'third position', length: 3});
+        })
 
     });
 
