@@ -4,7 +4,8 @@ describe('FindIndex method', () => {
 
     beforeEach(() => {
         testArray = { '0': 1, '1': 45, '2': 20, '3': -1, '4': -20, length: 5};
-    })
+    });
+
     test('Should return the index of the first number greater than 25, in this case, index 1', () => {
         //arrange
         //act
