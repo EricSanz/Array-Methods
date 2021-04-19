@@ -186,6 +186,24 @@ describe('Array Methods', () => {
             //assert
             expect(response).toEqual( {'0': '1', '2': 'twenty', length: 2});
         })
+    });
+
+    describe('some metho', () => {
+        test('Shoul return true', () => {
+            //arrange
+            //act
+            const response = testArray.some((x) => x > 1, testArray);
+            //assert
+            expect(response).toBe(true);
+        });
+
+        test('Should return false', () => {
+            //arrange
+            //act
+            const response = testArray.some((x) => x < 1, testArray);
+            //assert
+            expect(response).toBe(false);
+        })
     })
 
 });
