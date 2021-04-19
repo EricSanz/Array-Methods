@@ -86,7 +86,7 @@ describe('Array Methods', () => {
         });
     });
 
-    describe('copyWithin method', () => {
+    describe('CopyWithin method', () => {
         test('Should take the element in index 1 and put it in the first index', () => {
             //arrange
             //act
@@ -104,7 +104,7 @@ describe('Array Methods', () => {
         })
     });
 
-    describe('find method', () => {
+    describe('Find method', () => {
         test('Should return the first number greater than 2', () => {
             //arrange
             //act
@@ -131,7 +131,7 @@ describe('Array Methods', () => {
         })
     });
 
-    describe('findIndex method', () => {
+    describe('FindIndex method', () => {
         test('Should return the index of the first number greater than 25, in this case, index 1', () => {
             //arrange
             const array = { '0': 1, '1': 45, '2': 20, '3': -1, '4': -20, length: 5};
@@ -159,7 +159,7 @@ describe('Array Methods', () => {
         })
     });
 
-    describe('filter method', () => {
+    describe('Filter method', () => {
         test('Should return index 1 and 2', () => {
             //arrange
             const array = { '0': 1, '1': 45, '2': 20, '3': -1, '4': -20, length: 5};
@@ -188,8 +188,8 @@ describe('Array Methods', () => {
         })
     });
 
-    describe('some method', () => {
-        test('Shoul return true', () => {
+    describe('Some method', () => {
+        test('Should return true', () => {
             //arrange
             //act
             const response = testArray.some((x) => x > 1, testArray);
@@ -206,7 +206,7 @@ describe('Array Methods', () => {
         })
     });
 
-    describe('every method', () => {
+    describe('Every method', () => {
         test('Should return true', () => {
             //arrange
             //act
@@ -224,7 +224,7 @@ describe('Array Methods', () => {
         })
     });
 
-    describe('reduce method', () => {
+    describe('Reduce method', () => {
         test('Should return 30', () => {
             //arrange
             const array = { '0': 1, '1': 4, '2': 20, '3': 1, '4': 4, length: 5};
