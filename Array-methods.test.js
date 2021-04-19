@@ -188,7 +188,7 @@ describe('Array Methods', () => {
         })
     });
 
-    describe('some metho', () => {
+    describe('some method', () => {
         test('Shoul return true', () => {
             //arrange
             //act
@@ -201,6 +201,24 @@ describe('Array Methods', () => {
             //arrange
             //act
             const response = testArray.some((x) => x < 1, testArray);
+            //assert
+            expect(response).toBe(false);
+        })
+    });
+
+    describe('every method', () => {
+        test('Should return true', () => {
+            //arrange
+            //act
+            const response = testArray.every((x) => x > 0, testArray);
+            //assert
+            expect(response).toBe(true);
+        });
+
+        test('Should return false', () => {
+            //arrange
+            //act
+            const response = testArray.every((x) => x === 10, testArray);
             //assert
             expect(response).toBe(false);
         })
