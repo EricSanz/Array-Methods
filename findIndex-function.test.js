@@ -1,7 +1,6 @@
 const findIndexFunction = require('./findIndex-function');
 
 describe('FindIndex method', () => {
-
     beforeEach(() => {
         testArray = { '0': 1, '1': 45, '2': 20, '3': -1, '4': -20, length: 5};
     });
