@@ -153,7 +153,7 @@ describe('Array Methods', () => {
         test('Should return -1', () => {
             //arrange
             //act
-            const response = testArray.findIndex((x) => x = 0, testArray);
+            const response = testArray.findIndex((x) => x === 0, testArray);
             //assert
             expect(response).toBe(-1);
         })
