@@ -1,4 +1,4 @@
-const pushFunction = require('./push-method');
+const pushFunction = require('./push-function');
 
 describe('Push method', () => {
 
